@@ -5,6 +5,8 @@ RUN dnf -y update && dnf -y install httpd git wget unzip python2 python3 php && 
 
 RUN mkdir toolz 
 WORKDIR /toolz
+RUN mkdir hola
+
 #test
 
 
