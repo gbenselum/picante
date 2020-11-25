@@ -5,9 +5,6 @@ RUN dnf -y update && dnf -y install httpd git wget unzip python2 python3 php && 
 
 RUN mkdir toolz 
 WORKDIR /toolz
-RUN mkdir hola
-# hola gaston
-#test
-
+RUN pip install requests && git clone https://github.com/laramies/theHarvester.git && chmod +x theHarvester/theHarvester.py
 
 
