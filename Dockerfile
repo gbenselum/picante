@@ -15,14 +15,13 @@ RUN ./configure --enable-optimizations
 RUN make altinstall
 
 RUN rm /usr/src/Python-3.7.9.tgz
-RUN whereis python3.7
-RUN ln /usr/local/lib/python3.7 /usr/bin/python3
+RUN alias python3="python3.7"
 
-RUN python3.7 --version
-RUN python3 --version
 
 RUN mkdir toolz 
 WORKDIR /toolz
+RUN wget https://bootstrap.pypa.io/get-pip.py
+RUN python3 get-pip.py
 
 RUN git clone https://github.com/laramies/theHarvester.git && chmod +x theHarvester/theHarvester.py
 workdir /toolz/theHarvester
