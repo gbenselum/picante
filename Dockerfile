@@ -13,7 +13,7 @@ WORKDIR /usr/src/Python-3.7.9
 
 RUN ./configure --enable-optimizations
 RUN make altinstall
-RUN ln /usr/local/bin/python3.7 /usr/bin/python3
+#RUN ln /usr/local/bin/python3.7 /usr/bin/python3
 
 RUN rm /usr/src/Python-3.7.9.tgz
 
