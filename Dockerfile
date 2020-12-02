@@ -16,7 +16,7 @@ RUN make altinstall
 #RUN ln /usr/local/bin/python3.7 /usr/bin/python3
 
 RUN rm /usr/src/Python-3.7.9.tgz
-RUN python3 --version
+RUN whereis python3.7
 
 RUN mkdir toolz 
 WORKDIR /toolz
