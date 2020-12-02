@@ -2,7 +2,7 @@
 FROM registry.fedoraproject.org/fedora
 MAINTAINER gabrielzeven <gbenselum@gmail.com>
 
-RUN dnf -y update && dnf -y install httpd git wget unzip python2 python3 php && dnf clean all
+RUN dnf -y update && dnf -y install httpd git wget unzip python2 python3 python3-pip php && dnf clean all
 
 RUN mkdir toolz 
 WORKDIR /toolz
