@@ -1,5 +1,5 @@
-# FROM registry.access.redhat.com/ubi8/ubi
-FROM registry.fedoraproject.org/fedora
+FROM registry.access.redhat.com/ubi8/ubi
+#FROM registry.fedoraproject.org/fedora
 MAINTAINER gabrielzeven <gbenselum@gmail.com>
 # GCC and Python3.7 for harvester
 RUN dnf -y update && dnf -y install httpd git wget unzip python2 make php && dnf clean all
@@ -16,7 +16,7 @@ RUN make altinstall
 #RUN ln /usr/local/bin/python3.7 /usr/bin/python3
 
 RUN rm /usr/src/Python-3.7.9.tgz
-
+RUN python3 --version
 
 RUN mkdir toolz 
 WORKDIR /toolz
