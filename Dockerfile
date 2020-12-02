@@ -8,12 +8,13 @@ RUN dnf -y install gcc openssl-devel bzip2-devel libffi-devel zlib-devel make
 WORKDIR /usr/src
 RUN wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz && tar xzf Python-3.7.9.tgz
 
-RUN ln /usr/local/bin/python3.7 /usr/bin/python3
 
 WORKDIR /usr/src/Python-3.7.9
 
 RUN ./configure --enable-optimizations
 RUN make altinstall
+RUN ln /usr/local/bin/python3.7 /usr/bin/python3
+
 RUN rm /usr/src/Python-3.7.9.tgz
 
 
