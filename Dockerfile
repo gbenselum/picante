@@ -7,5 +7,6 @@ RUN mkdir toolz
 WORKDIR /toolz
 
 RUN git clone https://github.com/laramies/theHarvester.git && chmod +x theHarvester/theHarvester.py
-
-# RUN pip install requests && 
+workdir /toolz/theHarvester
+RUN pip3 install -r /toolz/theHarvester/requirements/base.txt
+ 
