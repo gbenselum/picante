@@ -1,4 +1,5 @@
 # picante
 ![alt text](https://quay.io/repository/gbenselum/picante/status)
-#
-#![alt text](https://snyk.io/test/github/gbenselum/picante/badge.svg)
+
+[![Known Vulnerabilities](https://snyk.io/test/github/gbenselum/picante/badge.svg?targetFile=Dockerfile)](https://snyk.io/test/github/gbenselum/picante?targetFile=Dockerfile)
+
