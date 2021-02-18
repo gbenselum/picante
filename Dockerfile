@@ -18,12 +18,12 @@ RUN rm /usr/src/Python-3.7.9.tgz
 RUN alias python3="python3.7"
 
 
-RUN mkdir toolz 
-WORKDIR /toolz
-RUN wget https://bootstrap.pypa.io/get-pip.py
-RUN python3 get-pip.py
+#RUN mkdir toolz 
+#WORKDIR /toolz
+#RUN wget https://bootstrap.pypa.io/get-pip.py
+#RUN python3 get-pip.py
 
-RUN git clone https://github.com/laramies/theHarvester.git && chmod +x theHarvester/theHarvester.py
-WORKDIR /toolz/theHarvester
-RUN pip3 install -r /toolz/theHarvester/requirements/base.txt
+#RUN git clone https://github.com/laramies/theHarvester.git && chmod +x theHarvester/theHarvester.py
+#WORKDIR /toolz/theHarvester
+#RUN pip3 install -r /toolz/theHarvester/requirements/base.txt
  
